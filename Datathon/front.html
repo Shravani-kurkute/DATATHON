@@ -1,0 +1,267 @@
+<html>
+ <head>
+  <title>
+   Retail Search
+  </title>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet"/>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&amp;display=swap" rel="stylesheet"/>
+  <style>
+   body {
+            margin: 0;
+            font-family: 'Roboto', sans-serif;
+            background-color: #0d1117;
+            color: #c9d1d9;
+        }
+        .container {
+            padding: 20px;
+        }
+        .back-button {
+            display: inline-block;
+            padding: 10px 20px;
+            border: 1px solid #c9d1d9;
+            border-radius: 5px;
+            color: #c9d1d9;
+            text-decoration: none;
+            margin-bottom: 20px;
+        }
+        .search-bar {
+            display: flex;
+            align-items: center;
+            background-color: #4f565f;
+            padding: 10px;
+            border-radius: 5px;
+            margin-bottom: 20px;
+            color: #ffffff;
+        }
+        .search-bar input {
+            flex: 1;
+            background: none;
+            border: none;
+            color: #ffffff;
+            font-size: 16px;
+            padding: 5px;
+        }
+        .search-bar input::placeholder {
+            color: #8b949e;
+        }
+        .search-bar i {
+            color: #ffffff;
+            margin-left: 10px;
+        }
+        .recent-searches, .search-history {
+            margin-bottom: 20px;
+        }
+        .recent-searches h2, .search-history h2 {
+            font-size: 18px;
+            margin-bottom: 10px;
+        }
+        .recent-searches .clear {
+            color: #58a6ff;
+            cursor: pointer;
+            float: right;
+        }
+        .search-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 10px;
+        }
+        .search-item {
+            height: 100px;
+            display: flex;
+            align-items: center;
+            background-color: #3a3f47;
+            padding: 10px;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        .search-item i {
+            margin-right: 10px;
+        }
+        .search-item .text {
+            flex: 1;
+        }
+        .search-item .text .title {
+            font-size: 16px;
+            font-weight: 500;
+        }
+        .search-item .text .subtitle {
+            font-size: 14px;
+            color: #8b949e;
+        }
+        .search-item .arrow {
+            color: #8b949e;
+        }
+        .history-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 10px;
+        }
+        .history-item {
+            height: 300px;
+            position: relative;
+        }
+        .history-item img {
+            height: 100%;
+            width: 100%;
+            border-radius: 5px;
+        }
+        .history-item .label {
+            position: absolute;
+            bottom: 10px;
+            left: 10px;
+            background-color: rgba(19, 17, 17, 0);
+            padding: 5px 10px;
+            border-radius: 5px;
+            font-size: 24px;
+            font-weight: 500;
+            color: white;
+        }
+        .footer {
+            display: flex;
+            justify-content: space-evenly;
+            padding: 10px 0;
+            background-color: #161b22;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+        }
+        .footer i {
+            color: #ffffff;
+            font-size: 25px;
+        }
+        .footer i.active {
+            font-size: 25px;
+
+            color: #ffffff;
+        }
+        @media (max-width: 768px) {
+            .search-grid, .history-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+  </style>
+ </head>
+ <body>
+  <div class="container">
+   <a class="back-button" href="recommendation.html">
+    <i class="fas fa-arrow-left">
+    </i>
+    Back to Categories
+   </a>
+   <div class="search-bar">
+    <input placeholder="Search for retail items..." type="text"/>
+    <i class="fas fa-bell" style="font-size: 30px;">
+    </i>
+    <a href="userprofile.html"><i class="fas fa-user-circle" style="font-size: 30;"></i></a>
+    
+   </div>
+   <div class="recent-searches">
+    <h2>
+     Recent retail searches
+     <span class="clear">
+      Clear
+     </span>
+    </h2>
+    <div class="search-grid">
+     <div class="search-item">
+      <i class="fas fa-tshirt">
+      </i>
+      <div class="text">
+       <div class="title">
+        Men's fashion
+       </div>
+       <div class="subtitle">
+        Women's fashion
+       </div>
+      </div>
+      <i class="fas fa-chevron-right arrow">
+      </i>
+     </div>
+     <div class="search-item">
+      <i class="fas fa-gem">
+      </i>
+      <div class="text">
+       <div class="title">
+        Luxury watches
+       </div>
+       <div class="subtitle">
+        Handcrafted Jewelry
+       </div>
+      </div>
+      <i class="fas fa-chevron-right arrow">
+      </i>
+     </div>
+     <div class="search-item">
+      <i class="fas fa-laptop">
+      </i>
+      <div class="text">
+       <div class="title">
+        Tech gadgets
+       </div>
+       <div class="subtitle">
+        Smart home devices
+       </div>
+      </div>
+      <i class="fas fa-chevron-right arrow">
+      </i>
+     </div>
+     <div class="search-item">
+      <i class="fas fa-home">
+      </i>
+      <div class="text">
+       <div class="title">
+        Cozy living
+       </div>
+       <div class="subtitle">
+        Kitchen essentials
+       </div>
+      </div>
+      <i class="fas fa-chevron-right arrow">
+      </i>
+     </div>
+    </div>
+   </div>
+   <div class="search-history">
+    <h2>
+     Based on your search history
+    </h2>
+    <div class="history-grid">
+     <div class="history-item">
+      <img alt="Trendy Picks - Image of various fashion items including clothes and accessories" height="200" src="https://storage.googleapis.com/a1aa/image/Fx9V4NkVbWY3udNJmVaX3kJtUBcAOF2p0tShzB9jyv0.jpg" width="300"/>
+      <div class="label">
+       Trendy Picks
+      </div>
+     </div>
+     <div class="history-item">
+      <img alt="Tech - Image of a futuristic tech gadget" height="200" src="https://storage.googleapis.com/a1aa/image/cgdGvyN5nW8WTTUDCStwCLNC7U2cHhMkbDRkVMrbyCI.jpg" width="300"/>
+      <div class="label">
+       Tech
+      </div>
+     </div>
+     <div class="history-item">
+      <img alt="Home Comfort - Image of a cozy living room" height="200" src="https://storage.googleapis.com/a1aa/image/gBaHhyHCeUNgmEQDrpkiTwGt73OfgsNPDsvPQjeTb2U.jpg" width="300"/>
+      <div class="label">
+       Home Comfort
+      </div>
+     </div>
+     <div class="history-item">
+      <img alt="Relaxation - Image of a serene outdoor scene with a lake and mountains" height="200" src="https://storage.googleapis.com/a1aa/image/9CjvOexKFAfpHqUMUCVDvHJU4HNRR9sTi2JW_hfqlkw.jpg" width="300"/>
+      <div class="label">
+       Relaxation
+      </div>
+     </div>
+    </div>
+   </div>
+  </div>
+  <div class="footer">
+   <i class="fas fa-home active">
+   </i>
+   <i class="fas fa-bars">
+   </i>
+   <i class="fas fa-shopping-bag">
+   </i>
+   <i class="fas fa-video">
+   </i>
+  </div>
+ </body>
+</html>

@@ -1,0 +1,220 @@
+<html>
+ <head>
+  <title>
+   Checkout
+  </title>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet"/>
+  <style>
+   body {
+            font-family: Arial, sans-serif;
+            background-color: #1a1a2e;
+            color: #fff;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+        .container {
+            width: 90%;
+            max-width: 1200px;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+        }
+        .section {
+            background-color: #2e2e4d;
+            padding: 20px;
+            border-radius: 10px;
+            margin-bottom: 20px;
+            width: 100%;
+            max-width: 48%;
+        }
+        .section h2 {
+            margin-top: 0;
+        }
+        .form-group {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+        .form-group input {
+            width: calc(50% - 10px);
+            padding: 10px;
+            border: none;
+            border-radius: 5px;
+            margin-bottom: 10px;
+            background-color: #3e3e5e;
+            color: #fff;
+        }
+        .form-group input.full-width {
+            width: 100%;
+        }
+        .order-summary {
+            width: 100%;
+            max-width: 48%;
+        }
+        .order-summary .item {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 10px;
+        }
+        .order-summary .item img {
+            width: 50px;
+            height: 50px;
+            border-radius: 5px;
+        }
+        .order-summary .item .details {
+            flex-grow: 1;
+            margin-left: 10px;
+        }
+        .order-summary .item .price {
+            color: #00ff00;
+        }
+        .order-summary .totals {
+            border-top: 1px solid #555;
+            padding-top: 10px;
+            margin-top: 10px;
+        }
+        .order-summary .totals .total {
+            font-size: 1.2em;
+        }
+        .place-order {
+            background-color: #00ff00;
+            color: #000;
+            padding: 15px;
+            border: none;
+            border-radius: 5px;
+            width: 100%;
+            font-size: 1.2em;
+            cursor: pointer;
+        }
+        @media (max-width: 768px) {
+            .section, .order-summary {
+                max-width: 100%;
+            }
+        }
+  </style>
+ </head>
+ <body>
+  <div class="container">
+   <div class="section">
+    <h2>
+     Shipping Information
+    </h2>
+    <div class="form-group">
+     <input placeholder="First Name" type="text"/>
+     <input placeholder="Last Name" type="text"/>
+     <input class="full-width" placeholder="Email Address" type="email"/>
+     <input class="full-width" placeholder="Street Address" type="text"/>
+     <input placeholder="City" type="text"/>
+     <input placeholder="State" type="text"/>
+     <input placeholder="ZIP Code" type="text"/>
+    </div>
+   </div>
+   <div class="section">
+    <h2>
+     Payment Details
+    </h2>
+    <div class="form-group">
+     <input class="full-width" placeholder="Card Number" type="text"/>
+     <input placeholder="MM" type="text"/>
+     <input placeholder="YY" type="text"/>
+     <input placeholder="CVV" type="text"/>
+    </div>
+   </div>
+   <div class="order-summary">
+    <h2>
+     Order Summary
+    </h2>
+    <div class="item">
+     <img alt="Accent Chair" height="50" src="https://storage.googleapis.com/a1aa/image/fZ2s-jvngNMc94I4cEFI6OiU7PvA0qj_HKCwkcfvPiI.jpg" width="50"/>
+     <div class="details">
+      <div>
+       Accent Chair
+      </div>
+      <div>
+       Quantity: 1
+      </div>
+     </div>
+     <div class="price">
+      $299.99
+     </div>
+    </div>
+    <div class="item">
+     <img alt="Modern Sofa" height="50" src="https://storage.googleapis.com/a1aa/image/CdUK_-yzIjNJCdO3MCYzP1LiRUqheO4C0zenST5GvU4.jpg" width="50"/>
+     <div class="details">
+      <div>
+       Modern Sofa
+      </div>
+      <div>
+       Quantity: 1
+      </div>
+     </div>
+     <div class="price">
+      $899.99
+     </div>
+    </div>
+    <div class="item">
+     <img alt="Wall Art Set" height="50" src="https://storage.googleapis.com/a1aa/image/pDaZc5rL7I2e2P_S8dWh6WbOmxk2WCeHbEwCFawmMzw.jpg" width="50"/>
+     <div class="details">
+      <div>
+       Wall Art Set
+      </div>
+      <div>
+       Quantity: 1
+      </div>
+     </div>
+     <div class="price">
+      $199.99
+     </div>
+    </div>
+    <div class="item">
+     <img alt="Bookshelf" height="50" src="https://storage.googleapis.com/a1aa/image/SIy3I_IwlgALc5UEArXaDIWY-90IskFM8YUgCmdKyuo.jpg" width="50"/>
+     <div class="details">
+      <div>
+       Bookshelf
+      </div>
+      <div>
+       Quantity: 1
+      </div>
+     </div>
+     <div class="price">
+      $299.99
+     </div>
+    </div>
+    <div class="totals">
+     <div class="item">
+      <div>
+       Subtotal
+      </div>
+      <div>
+       $1699.96
+      </div>
+     </div>
+     <div class="item">
+      <div>
+       Shipping
+      </div>
+      <div>
+       $9.99
+      </div>
+     </div>
+     <div class="item total">
+      <div>
+       Total
+      </div>
+      <div>
+       $1709.95
+      </div>
+     </div>
+    </div>
+    <button class="place-order">
+     Place Order
+    </button>
+   </div>
+  </div>
+ </body>
+</html>

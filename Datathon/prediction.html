@@ -1,0 +1,384 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Retail Analytics Hub</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <style>
+        /* Previous styles remain the same */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            min-height: 100vh;
+            background-color: rgb(249, 250, 251);
+            padding: 2rem;
+            font-family: sans-serif;
+        }
+
+        .container {
+            max-width: 64rem;
+            margin: 0 auto;
+        }
+
+        .main-card {
+            background-color: white;
+            border-radius: 1rem;
+            box-shadow: 0 20px 25px -5px rgb(0 0 0 / 0.1);
+            padding: 2rem;
+            transform: scale(1);
+            transition: transform 0.3s;
+        }
+
+        .main-card:hover {
+            transform: scale(1.01);
+        }
+
+        .title {
+            font-size: 3rem;
+            font-weight: bold;
+            color: transparent;
+            background: linear-gradient(to right, #2563eb, #1e40af);
+            -webkit-background-clip: text;
+            background-clip: text;
+            text-align: center;
+            margin-bottom: 2rem;
+        }
+
+        .grid {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 2rem;
+        }
+
+        @media (min-width: 768px) {
+            .grid {
+                grid-template-columns: 1fr 1fr;
+            }
+        }
+
+        .card {
+            background-color: white;
+            border-radius: 0.75rem;
+            box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1);
+            border: 1px solid rgb(243, 244, 246);
+            transform: translateY(0);
+            transition: all 0.3s;
+            padding: 2rem;
+        }
+
+        .card:hover {
+            transform: translateY(-0.25rem);
+        }
+
+        .card-title {
+            font-size: 1.5rem;
+            font-weight: 600;
+            color: rgb(55, 65, 81);
+            text-align: center;
+            margin-bottom: 1.5rem;
+        }
+
+        .form-group {
+            margin-bottom: 1.5rem;
+            transform: scale(1);
+            transition: all 0.3s;
+        }
+
+        .form-group:hover {
+            transform: scale(1.02);
+        }
+
+        .form-label {
+            display: block;
+            color: rgb(75, 85, 99);
+            font-size: 0.875rem;
+            font-weight: 500;
+            margin-bottom: 0.5rem;
+        }
+
+        .form-input,
+        .form-select {
+            width: 100%;
+            padding: 0.75rem;
+            background-color: white;
+            border: 1px solid rgb(209, 213, 219);
+            border-radius: 0.5rem;
+            color: rgb(55, 65, 81);
+            outline: none;
+        }
+
+        .form-input:focus,
+        .form-select:focus {
+            ring: 2px solid rgb(59, 130, 246);
+            border-color: transparent;
+        }
+
+        .submit-btn {
+            width: 100%;
+            margin-top: 1.5rem;
+            background: linear-gradient(to right, #2563eb, #1e40af);
+            color: white;
+            padding: 0.75rem;
+            border-radius: 0.5rem;
+            font-weight: bold;
+            border: none;
+            cursor: pointer;
+            transform: scale(1);
+            transition: all 0.3s;
+        }
+
+        .submit-btn:hover {
+            transform: scale(1.02);
+            box-shadow: 0 10px 15px -3px rgb(0 0 0 / 0.1);
+        }
+
+        .prediction-card {
+            background-color: white;
+            padding: 1.5rem;
+            border-radius: 0.5rem;
+            box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1);
+            border: 1px solid rgb(243, 244, 246);
+            margin-bottom: 1.5rem;
+            transform: scale(1);
+            transition: all 0.3s;
+            animation: float 6s ease-in-out infinite;
+        }
+
+        .prediction-card:hover {
+            transform: scale(1.02);
+        }
+
+        .prediction-title {
+            font-weight: 500;
+            font-size: 1.125rem;
+            margin-bottom: 0.5rem;
+            color: #2563eb;
+        }
+
+        .prediction-text {
+            color: rgb(55, 65, 81);
+        }
+
+        .loading {
+            display: none;
+            text-align: center;
+            padding: 2rem;
+        }
+
+        .loading-spinner {
+            border: 4px solid #f3f3f3;
+            border-top: 4px solid #2563eb;
+            border-radius: 50%;
+            width: 40px;
+            height: 40px;
+            animation: spin 1s linear infinite;
+            margin: 0 auto 1rem;
+        }
+
+        @keyframes spin {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+
+        @keyframes float {
+            0% { transform: translateY(0px); }
+            50% { transform: translateY(-10px); }
+            100% { transform: translateY(0px); }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="main-card">
+            <h1 class="title">Retail Analytics Hub</h1>
+            
+            <div class="grid">
+                <!-- Customer Analysis Form -->
+                <div class="card">
+                    <h2 class="card-title">
+                        <i class="fas fa-analytics mr-2"></i>Customer Analysis
+                    </h2>
+                    <form id="analysisForm">
+                        <div class="form-group">
+                            <label class="form-label">
+                                <i class="fas fa-user-alt"></i> Age
+                            </label>
+                            <input type="number" name="age" class="form-input" required>
+                        </div>
+
+                        <div class="form-group">
+                            <label class="form-label">
+                                <i class="fas fa-venus-mars"></i> Gender
+                            </label>
+                            <select name="gender" class="form-select" required>
+                                <option value="">Select Gender</option>
+                                <option value="Male">Male</option>
+                                <option value="Female">Female</option>
+                            </select>
+                        </div>
+
+                        <div class="form-group">
+                            <label class="form-label">
+                                <i class="fas fa-tshirt"></i> Item Category
+                            </label>
+                            <select name="category" class="form-select" required>
+                                <option value="">Select Category</option>
+                                <option value="Clothing">Clothing</option>
+                                <option value="Accessories">Accessories</option>
+                                <option value="Footwear">Footwear</option>
+                            </select>
+                        </div>
+
+                        <div class="form-group">
+                            <label class="form-label">
+                                <i class="fas fa-dollar-sign"></i> Purchase Amount (USD)
+                            </label>
+                            <input type="number" name="amount" class="form-input" required>
+                        </div>
+
+                        <div class="form-group">
+                            <label class="form-label">
+                                <i class="fas fa-star"></i> Previous Purchase Count
+                            </label>
+                            <input type="number" name="previous_purchases" class="form-input" required>
+                        </div>
+
+                        <div class="form-group">
+                            <label class="form-label">
+                                <i class="fas fa-clock"></i> Purchase Frequency
+                            </label>
+                            <select name="frequency" class="form-select" required>
+                                <option value="">Select Frequency</option>
+                                <option value="Weekly">Weekly</option>
+                                <option value="Monthly">Monthly</option>
+                                <option value="Quarterly">Quarterly</option>
+                            </select>
+                        </div>
+
+                        <button type="submit" class="submit-btn">
+                            <i class="fas fa-chart-line"></i> Generate Prediction
+                        </button>
+                    </form>
+                </div>
+
+                <!-- Predictions & Insights -->
+                <div class="card">
+                    <h2 class="card-title">
+                        <i class="fas fa-lightbulb"></i> Predictions & Insights
+                    </h2>
+                    <div id="loading" class="loading">
+                        <div class="loading-spinner"></div>
+                        <p>Analyzing customer data...</p>
+                    </div>
+                    <div id="predictions" class="empty-state">
+                        <i class="fas fa-chart-line"></i>
+                        <p>Enter customer data to see predictions</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        document.getElementById('analysisForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            // Show loading state
+            const loadingDiv = document.getElementById('loading');
+            const predictionsDiv = document.getElementById('predictions');
+            loadingDiv.style.display = 'block';
+            predictionsDiv.innerHTML = '';
+
+            // Gather form data
+            const formData = new FormData(e.target);
+            const customerData = Object.fromEntries(formData);
+
+            // Simulate API call to model prediction
+            setTimeout(() => {
+                // This would be replaced with actual API call to your Python backend
+                const prediction = predictCustomerPreference(customerData);
+                
+                // Update predictions display
+                loadingDiv.style.display = 'none';
+                predictionsDiv.innerHTML = `
+                    <div class="prediction-card">
+                        <h3 class="prediction-title">
+                            <i class="fas fa-store"></i> Preferred Outlet
+                        </h3>
+                        <p class="prediction-text">${prediction.outlet}</p>
+                    </div>
+
+                    <div class="prediction-card">
+                        <h3 class="prediction-title">
+                            <i class="fas fa-chart-bar"></i> Purchase Probability
+                        </h3>
+                        <p class="prediction-text">${prediction.probability}%</p>
+                    </div>
+
+                    <div class="prediction-card">
+                        <h3 class="prediction-title">
+                            <i class="fas fa-tags"></i> Recommended Products
+                        </h3>
+                        <ul class="product-list">
+                            ${prediction.recommendations.map(product => `
+                                <li class="product-item">
+                                    <i class="fas fa-check-circle"></i>
+                                    ${product}
+                                </li>
+                            `).join('')}
+                        </ul>
+                    </div>
+                `;
+            }, 1500);
+        });
+
+        // Simulate model prediction (this would be replaced by API call to Python backend)
+        function predictCustomerPreference(customerData) {
+            // Logic based on the trained model's patterns
+            let outlet = "Downtown Store";
+            let probability = 85;
+            let recommendations = [];
+
+            // Age-based logic
+            if (customerData.age < 30) {
+                outlet = "Urban Mall";
+                recommendations.push("Trendy Fashion", "Sports Gear");
+            } else if (customerData.age < 50) {
+                outlet = "Downtown Store";
+                recommendations.push("Business Casual", "Accessories");
+            } else {
+                outlet = "Suburban Center";
+                recommendations.push("Classic Wear", "Comfort Shoes");
+            }
+
+            // Purchase amount based logic
+            if (customerData.amount > 200) {
+                probability += 10;
+                recommendations.push("Premium Collection");
+            }
+
+            // Frequency based adjustments
+            if (customerData.frequency === "Weekly") {
+                probability += 5;
+                recommendations.push("Loyalty Rewards");
+            }
+
+            // Previous purchase based logic
+            if (customerData.previous_purchases > 5) {
+                probability += 5;
+                recommendations.push("VIP Collection");
+            }
+
+            return {
+                outlet: outlet,
+                probability: Math.min(probability, 100),
+                recommendations: recommendations
+            };
+        }
+    </script>
+</body>
+</html>

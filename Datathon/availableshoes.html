@@ -1,0 +1,131 @@
+<html>
+ <head>
+  <title>
+   Available Products
+  </title>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet"/>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&amp;display=swap" rel="stylesheet"/>
+  <style>
+   body {
+            margin: 0;
+            font-family: 'Roboto', sans-serif;
+            background-color: #1a1a2e;
+            color: #fff;
+        }
+        .container {
+            padding: 20px;
+        }
+        .header {
+            display: flex;
+            align-items: center;
+            margin-bottom: 20px;
+        }
+        .header i {
+            font-size: 24px;
+            cursor: pointer;
+        }
+        .header h1 {
+            margin-left: 10px;
+            font-size: 24px;
+        }
+        .products {
+            display: flex;
+            gap: 20px;
+            flex-wrap: wrap;
+        }
+        .product-card {
+            background-color: #2e2e4d;
+            border-radius: 10px;
+            overflow: hidden;
+            width: 300px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+        .product-card img {
+            width: 100%;
+            height: auto;
+        }
+        .product-info {
+            padding: 15px;
+        }
+        .product-info h2 {
+            font-size: 18px;
+            margin: 0 0 10px;
+        }
+        .product-info p {
+            font-size: 14px;
+            margin: 0 0 15px;
+            color: #b0b0b0;
+        }
+        .product-info .price {
+            font-size: 18px;
+            color: #00ff00;
+            margin-bottom: 15px;
+        }
+        .product-info button {
+            background-color: #007bff;
+            color: #fff;
+            border: none;
+            padding: 10px 15px;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 14px;
+        }
+        .product-info button:hover {
+            background-color: #0056b3;
+        }
+        @media (max-width: 768px) {
+            .products {
+                flex-direction: column;
+                align-items: center;
+            }
+        }
+  </style>
+ </head>
+ <body>
+  <div class="container">
+   <div class="header">
+    <i class="fas fa-arrow-left"><a href="footwear.html">back</a>
+    </i>
+    <h1>
+     Available Products
+    </h1>
+   </div>
+   <div class="products">
+    <div class="product-card">
+     <img alt="A pair of classic leather oxford shoes" height="200" src="https://storage.googleapis.com/a1aa/image/L4mCe1xbHJBEg8HfVCqA-2iIbeo8A8O8bssbw9Nn4tk.jpg" width="300"/>
+     <div class="product-info">
+      <h2>
+       Oxford Shoes
+      </h2>
+      <p>
+       Classic leather oxford shoes
+      </p>
+      <div class="price">
+       $199.99
+      </div>
+      <button>
+       Add to Cart
+      </button>
+     </div>
+    </div>
+    <div class="product-card">
+     <img alt="A pair of slip-on leather loafers" height="200" src="https://storage.googleapis.com/a1aa/image/bPNPCxj2Q6aCHML3Vftkp9Q8jQ1_y43pwVYp5BvGft4.jpg" width="300"/>
+     <div class="product-info">
+      <h2>
+       Loafers
+      </h2>
+      <p>
+       Slip-on leather loafers
+      </p>
+      <div class="price">
+       $159.99
+      </div>
+      <button>
+       Add to Cart
+      </button>
+     </div>
+    </div>
+   </div>
+  </div>
+ </body>
+</html>

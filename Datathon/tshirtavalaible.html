@@ -1,0 +1,183 @@
+<html>
+ <head>
+  <title>
+   Available Products
+  </title>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet"/>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&amp;display=swap" rel="stylesheet"/>
+  <style>
+   body {
+            margin: 0;
+            font-family: 'Roboto', sans-serif;
+            background-color: #1a1a2e;
+            color: #fff;
+        }
+        .container {
+            padding: 20px;
+        }
+        .header {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            margin-bottom: 20px;
+        }
+        .header h1 {
+            font-size: 24px;
+        }
+        .products {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+        }
+        .product-card {
+            background-color: #2e2e4d;
+            border-radius: 10px;
+            overflow: hidden;
+            width: calc(33.333% - 20px);
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+        .product-card img {
+            width: 100%;
+            height: auto;
+        }
+        .product-info {
+            padding: 15px;
+        }
+        .product-info h3 {
+            margin: 0;
+            font-size: 18px;
+        }
+        .product-info p {
+            margin: 5px 0 10px;
+            font-size: 14px;
+            color: #b0b0b0;
+        }
+        .product-info .price {
+            font-size: 16px;
+            color: #29ff29;
+            font-weight: bold;
+        }
+        .product-info .add-to-cart {
+            background-color: #007bff;
+            color: #fff;
+            border: none;
+            padding: 10px 15px;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 14px;
+        }
+        .product-info .add-to-cart:hover {
+            background-color: #0056b3;
+        }
+        @media (max-width: 768px) {
+            .product-card {
+                width: calc(50% - 20px);
+            }
+        }
+        @media (max-width: 480px) {
+            .product-card {
+                width: 100%;
+            }
+        }
+  </style>
+ </head>
+ <body>
+  <div class="container">
+    <a href="tshirtavalaible.html">filters</a>
+   <div class="header">
+    <a href="clothing.html" style="color: white;"><i class="fas fa-arrow-left">
+    </i></a>
+    <h1>
+     Available Products
+    </h1>
+   </div>
+   <div class="products">
+    <div class="product-card">
+     <img alt="Classic T-Shirt with a skull design" height="400" src="https://storage.googleapis.com/a1aa/image/Z2t8zfIymqNgN_kdBrO50CH5k_2qAahCDH8_xq-k9DU.jpg" width="600"/>
+     <div class="product-info">
+      <h3>
+       Classic T-Shirt
+      </h3>
+      <p>
+       Comfortable cotton blend casual t-shirt
+      </p>
+      <div class="price">
+       $29.99
+      </div>
+      <button class="add-to-cart">
+       Add to Cart
+      </button>
+     </div>
+    </div>
+    <div class="product-card">
+     <img alt="Denim Jeans" height="400" src="https://storage.googleapis.com/a1aa/image/Sdj2yuqMmfNmim4eyVGqQNkvbZ3aEtlvwG4btWArnVk.jpg" width="600"/>
+     <div class="product-info">
+      <h3>
+       Denim Jeans
+      </h3>
+      <p>
+       Regular fit casual denim jeans
+      </p>
+      <div class="price">
+       $59.99
+      </div>
+      <button class="add-to-cart">
+       Add to Cart
+      </button>
+     </div>
+    </div>
+    <div class="product-card">
+     <img alt="Casual Hoodie" height="400" src="https://storage.googleapis.com/a1aa/image/MFt5Zu8OoRH5HUlbtC4NkVp1yqVKWvsSahZ6arlDEik.jpg" width="600"/>
+     <div class="product-info">
+      <h3>
+       Casual Hoodie
+      </h3>
+      <p>
+       Warm and cozy everyday hoodie
+      </p>
+      <div class="price">
+       $49.99
+      </div>
+      <button class="add-to-cart">
+       Add to Cart
+      </button>
+     </div>
+    </div>
+    <div class="product-card">
+     <img alt="Business Suit" height="400" src="https://storage.googleapis.com/a1aa/image/jMJnJ2koeogRZM86WEiUja9B5MU3lrmTX-2sMGuPT2Y.jpg" width="600"/>
+     <div class="product-info">
+      <h3>
+       Business Suit
+      </h3>
+      <p>
+       Professional two-piece suit
+      </p>
+      <div class="price">
+       $299.99
+      </div>
+      <button class="add-to-cart">
+       Add to Cart
+      </button>
+     </div>
+    </div>
+    <div class="product-card">
+     <img alt="Dress Shirt" height="400" src="https://storage.googleapis.com/a1aa/image/fbF4zMixZppyDJDmo8JhzitScVCrtAZG0E-W0Yh3mRk.jpg" width="600"/>
+     <div class="product-info">
+      <h3>
+       Dress Shirt
+      </h3>
+      <p>
+       Classic white dress shirt
+      </p>
+      <div class="price">
+       $79.99
+      </div>
+      <button class="add-to-cart">
+       Add to Cart
+      </button>
+     </div>
+    </div>
+   </div>
+  </div>
+ </body>
+</html>

@@ -1,0 +1,140 @@
+<html>
+<head>
+    <title>Customize Your Experience</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            margin: 0;
+            font-family: 'Roboto', sans-serif;
+            background-color: #1a1a2e;
+            color: #fff;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+        .container {
+            text-align: center;
+        }
+        .header {
+            font-size: 24px;
+            margin-bottom: 20px;
+        }
+        .preferences {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 20px;
+        }
+        .preference-box {
+            background-color: #2e2e4e;
+            padding: 20px;
+            border-radius: 10px;
+        }
+        .preference-box h3 {
+            font-size: 18px;
+            margin-bottom: 10px;
+        }
+        .preference-box i {
+            color: #00ff88;
+            margin-right: 10px;
+        }
+        .preference-box i.fa-crown {
+            color: #00ff88;
+        }
+        .preference-box i.fa-palette {
+            color: #00ff88;
+        }
+        .preference-box i.fa-tags {
+            color: #00ff88;
+        }
+        .preference-box i.fa-shoe-prints {
+            color: #00ff88;
+        }
+        .options {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 10px;
+        }
+        .option {
+            background-color: #3e3e5e;
+            padding: 10px;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+        .option:hover {
+            background-color: #3b82f6;
+        }
+        .option.selected {
+            background-color: #3b82f6;
+        }
+        .apply-button {
+            background-color: #00ff88;
+            color: #000;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">Customize Your Experience</div>
+        <div class="preferences">
+            <div class="preference-box">
+                <h3><i class="fas fa-shoe-prints"></i>Size Preferences</h3>
+                <div class="options">
+                    <div class="option">6</div>
+                    <div class="option">7</div>
+                    <div class="option">8</div>
+                    <div class="option">9</div>
+                    <div class="option">10</div>
+                    <div class="option">11</div>
+                    <div class="option">12</div>
+                </div>
+            </div>
+            <div class="preference-box">
+                <h3><i class="fas fa-tags"></i>Price Range</h3>
+                <div class="options">
+                    <div class="option">Under $50</div>
+                    <div class="option">$50-$100</div>
+                    <div class="option">$100-$200</div>
+                    <div class="option">$200+</div>
+                </div>
+            </div>
+            <div class="preference-box">
+                <h3><i class="fas fa-palette"></i>Color Preferences</h3>
+                <div class="options">
+                    <div class="option">Black</div>
+                    <div class="option">Brown</div>
+                    <div class="option">White</div>
+                    <div class="option">Blue</div>
+                    <div class="option">Red</div>
+                    <div class="option">Multi</div>
+                </div>
+            </div>
+            <div class="preference-box">
+                <h3><i class="fas fa-crown"></i>Brand Selection</h3>
+                <div class="options">
+                    <div class="option">Nike</div>
+                    <div class="option">Adidas</div>
+                    <div class="option">New Balance</div>
+                    <div class="option">Puma</div>
+                    <div class="option">Reebok</div>
+                </div>
+            </div>
+        </div>
+        <button class="apply-button">Apply Settings</button>
+    </div>
+    <script>
+        document.querySelectorAll('.option').forEach(option => {
+            option.addEventListener('click', function() {
+                this.classList.toggle('selected');
+            });
+        });
+    </script>
+</body>
+</html>

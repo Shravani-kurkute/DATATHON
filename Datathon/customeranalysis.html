@@ -1,0 +1,165 @@
+<html>
+<head>
+    <title>Retail Analytics Hub</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Roboto', sans-serif;
+            background-color: #f5f7fa;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+        .container {
+            background-color: #fff;
+            border-radius: 20px;
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+            padding: 30px;
+            max-width: 500px;
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            transition: transform 0.3s ease;
+        }
+        .container:hover {
+            transform: translateY(-10px);
+        }
+        .title {
+            font-size: 28px;
+            font-weight: 700;
+            color: #1a73e8;
+            margin-bottom: 30px;
+            text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1);
+        }
+        .card {
+            background-color: #fff;
+            border-radius: 20px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+            padding: 20px;
+            width: 100%;
+            transition: transform 0.3s ease;
+        }
+        .card:hover {
+            transform: translateY(-5px);
+        }
+        .card h2 {
+            font-size: 20px;
+            font-weight: 500;
+            margin-bottom: 20px;
+            display: flex;
+            align-items: center;
+            color: #333;
+        }
+        .card h2 i {
+            margin-right: 10px;
+            color: #1a73e8;
+        }
+        .form-group {
+            margin-bottom: 20px;
+        }
+        .form-group label {
+            display: block;
+            font-size: 16px;
+            margin-bottom: 10px;
+            color: #555;
+        }
+        .form-group input, .form-group select {
+            width: 100%;
+            padding: 12px;
+            border: 1px solid #ddd;
+            border-radius: 10px;
+            font-size: 16px;
+            box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.1);
+            transition: border-color 0.3s ease;
+        }
+        .form-group input:focus, .form-group select:focus {
+            border-color: #1a73e8;
+            outline: none;
+        }
+        .btn {
+            background-color: #1a73e8;
+            color: #fff;
+            padding: 12px 25px;
+            border: none;
+            border-radius: 10px;
+            font-size: 16px;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: background-color 0.3s ease, transform 0.3s ease;
+        }
+        .btn i {
+            margin-right: 10px;
+        }
+        .btn:hover {
+            background-color: #155ab6;
+            transform: translateY(-3px);
+        }
+        @media (max-width: 768px) {
+            .container {
+                padding: 20px;
+            }
+            .title {
+                font-size: 24px;
+                margin-bottom: 20px;
+            }
+            .card h2 {
+                font-size: 18px;
+            }
+            .form-group label {
+                font-size: 14px;
+            }
+            .form-group input, .form-group select {
+                font-size: 14px;
+            }
+            .btn {
+                font-size: 14px;
+                padding: 10px 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="title">Retail Analytics Hub</div>
+        <div class="card">
+            <h2><i class="fas fa-chart-line"></i> Customer Analysis</h2>
+            <div class="form-group">
+                <label for="store-location"><i class="fas fa-map-marker-alt"></i> Store Location</label>
+                <select id="store-location">
+                    <option>Suburban Mall</option>
+                    <option>Downtown Store</option>
+                    <option>City Center</option>
+                    <option>Rural Outlet</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="customer-age"><i class="fas fa-user"></i> Customer Age</label>
+                <input type="number" id="customer-age" value="40">
+            </div>
+            <div class="form-group">
+                <label for="annual-income"><i class="fas fa-dollar-sign"></i> Annual Income ($)</label>
+                <input type="number" id="annual-income" value="50000">
+            </div>
+            <div class="form-group">
+                <label for="distance"><i class="fas fa-road"></i> Distance from Store (miles)</label>
+                <input type="number" id="distance" value="500">
+            </div>
+            <div class="form-group">
+                <label for="shopping-preference"><i class="fas fa-shopping-bag"></i> Shopping Preference</label>
+                <select id="shopping-preference">
+                    <option>Both</option>
+                    <option>Online</option>
+                    <option>In-Store</option>
+                </select>
+            </div>
+            <button class="btn"><i class="fas fa-magic"></i> Generate Prediction</button>
+        </div>
+    </div>
+</body>
+</html>

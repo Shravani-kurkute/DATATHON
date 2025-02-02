@@ -1,0 +1,99 @@
+<html>
+ <head>
+  <title>
+   StoreSense Login
+  </title>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet"/>
+  <style>
+   body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            background-color: #383838;
+            font-family: Arial, sans-serif;
+        }
+        .login-container {
+            background-color: #000000;
+            padding: 40px;
+            border-radius: 10px;
+            box-shadow: 0 0 20px rgba(239, 239, 239, 0.5);
+            text-align: center;
+            width: 300px;
+        }
+        .login-container img {
+            width: 50px;
+            margin-bottom: 20px;
+        }
+        .login-container h1 {
+            color: #ff66b2;
+            margin-bottom: 30px;
+        }
+        .login-container label {
+            display: block;
+            color: #b3b3b3;
+            text-align: left;
+            margin-bottom: 5px;
+        }
+        .login-container input[type="text"],
+        .login-container input[type="password"] {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 20px;
+            border: none;
+            border-radius: 5px;
+            background-color: #333;
+            color: #fff;
+        }
+        .login-container button {
+            width: 100%;
+            padding: 10px;
+            border: none;
+            border-radius: 5px;
+            background-color: #a64bf4;
+            color: #fff;
+            font-size: 16px;
+            cursor: pointer;
+            height: 40px;
+        }
+        .login-container button:hover {
+            background-color: #8a3be0;
+        }
+        .login-container p {
+            color: #b3b3b3;
+            margin-top: 20px;
+        }
+        .login-container p a {
+            color: #ff66b2;
+            text-decoration: none;
+        }
+  </style>
+ </head>
+ <body>
+  <div class="login-container">
+   <img alt="User icon" height="50" src="https://storage.googleapis.com/a1aa/image/eG0eHik58at9BzMAw1wDDB4_db3yrU8n_QVrzZaVduM.jpg" width="50"/>
+   <h1>
+    StoreSense
+   </h1>
+   <form>
+    <label for="username">
+     Username
+    </label>
+    <input id="username" name="username" type="text" value="shraw"/>
+    <label for="password">
+     Password
+    </label>
+    <input id="password" name="password" type="password" value="******"/>
+    
+    <a href="welcome.html" style="text-decoration: none; color: white; display: inline-block; padding: 10px 20px; background-color: #007BFF; border-radius: 5px; text-align: center;">Login</a>
+   </form>
+   <p>
+    Don't have an account?
+    <a href="signup.html">
+     Sign up
+    </a>
+   </p>
+  </div>
+ </body>
+</html>

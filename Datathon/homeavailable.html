@@ -1,0 +1,198 @@
+<html>
+ <head>
+  <title>
+   Available Products
+  </title>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet"/>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&amp;display=swap" rel="stylesheet"/>
+  <style>
+   body {
+            margin: 0;
+            font-family: 'Roboto', sans-serif;
+            background-color: #1a1a2e;
+            color: #fff;
+        }
+        .container {
+            padding: 20px;
+        }
+        .header {
+            display: flex;
+            align-items: center;
+            padding: 10px 0;
+        }
+        .header i {
+            font-size: 24px;
+            cursor: pointer;
+        }
+        .header h1 {
+            margin: 0;
+            margin-left: 10px;
+            font-size: 24px;
+        }
+        .products {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+        }
+        .product-card {
+            background-color: #2e2e4d;
+            border-radius: 10px;
+            overflow: hidden;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+        .product-card img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+        }
+        .product-info {
+            padding: 15px;
+        }
+        .product-info h3 {
+            margin: 0;
+            font-size: 18px;
+            font-weight: 500;
+        }
+        .product-info p {
+            margin: 5px 0;
+            font-size: 14px;
+            color: #b0b0b0;
+        }
+        .product-info .price {
+            font-size: 18px;
+            font-weight: 700;
+            color: #4caf50;
+        }
+        .product-info .add-to-cart {
+            background-color: #1e90ff;
+            color: #fff;
+            border: none;
+            padding: 10px;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 14px;
+            margin-top: 10px;
+        }
+        .product-info .add-to-cart:hover {
+            background-color: #1c86ee;
+        }
+  </style>
+ </head>
+ <body>
+  <div class="container">
+   <div class="header">
+    <i class="fas fa-arrow-left"><a href="home-decor.html">back</a>
+    </i>
+    <h1>
+     Available Products
+    </h1>
+   </div>
+   <div class="products">
+    <div class="product-card">
+     <img alt="Bookshelf - Modern bookshelf with multiple compartments" height="200" src="https://storage.googleapis.com/a1aa/image/L7jm4VGAj_TH1bH3BI20EYo_v1vVyNR7AGSzHDefxkU.jpg" width="300"/>
+     <div class="product-info">
+      <h3>
+       Bookshelf
+      </h3>
+      <p>
+       Modern bookshelf with multiple compartments
+      </p>
+      <div class="price">
+       $299.99
+      </div>
+      <button class="add-to-cart">
+       Add to Cart
+      </button>
+     </div>
+    </div>
+    <div class="product-card">
+     <img alt="Storage Ottoman - Multifunctional storage ottoman with lid" height="200" src="https://storage.googleapis.com/a1aa/image/CO7Q_Ur6pDctIewKMRMFwZZhzMwgXRHlEV3h5VqxvtQ.jpg" width="300"/>
+     <div class="product-info">
+      <h3>
+       Storage Ottoman
+      </h3>
+      <p>
+       Multifunctional storage ottoman with lid
+      </p>
+      <div class="price">
+       $159.99
+      </div>
+      <button class="add-to-cart">
+       Add to Cart
+      </button>
+     </div>
+    </div>
+    <div class="product-card">
+     <img alt="Pendant Light - Modern hanging pendant light fixture" height="200" src="https://storage.googleapis.com/a1aa/image/iuSSQDJixYf6xJdKbj5QrHIZu-hdunoT3XUq8NDpdzU.jpg" width="300"/>
+     <div class="product-info">
+      <h3>
+       Pendant Light
+      </h3>
+      <p>
+       Modern hanging pendant light fixture
+      </p>
+      <div class="price">
+       $149.99
+      </div>
+      <button class="add-to-cart">
+       Add to Cart
+      </button>
+     </div>
+    </div>
+    <div class="product-card">
+     <img alt="Floor Lamp - Adjustable floor lamp with warm lighting" height="200" src="https://storage.googleapis.com/a1aa/image/p8FfiefER99ZwI2ZwOWBf6DlweGIzOk_a_pF1qw-0qM.jpg" width="300"/>
+     <div class="product-info">
+      <h3>
+       Floor Lamp
+      </h3>
+      <p>
+       Adjustable floor lamp with warm lighting
+      </p>
+      <div class="price">
+       $129.99
+      </div>
+      <button class="add-to-cart">
+       Add to Cart
+      </button>
+     </div>
+    </div>
+    <div class="product-card">
+     <img alt="Modern Sofa - Contemporary 3-seater sofa with plush cushions" height="200" src="https://storage.googleapis.com/a1aa/image/04c2xquR9ilgs7ECA3FsuD9NO0IP3fmmMUvzLx8r26U.jpg" width="300"/>
+     <div class="product-info">
+      <h3>
+       Modern Sofa
+      </h3>
+      <p>
+       Contemporary 3-seater sofa with plush cushions
+      </p>
+      <div class="price">
+       $899.99
+      </div>
+      <button class="add-to-cart">
+       Add to Cart
+      </button>
+     </div>
+    </div>
+    <div class="product-card">
+     <img alt="Accent Chair - Stylish accent chair for living room" height="200" src="https://storage.googleapis.com/a1aa/image/mT5NZp7ICFPH0KFpHFciIf2YYS_BZprz8x0uoIh6H5U.jpg" width="300"/>
+     <div class="product-info">
+      <h3>
+       Accent Chair
+      </h3>
+      <p>
+       Stylish accent chair for living room
+      </p>
+      <div class="price">
+       $299.99
+      </div>
+      <button class="add-to-cart">
+       Add to Cart
+      </button>
+     </div>
+    </div>
+   </div>
+  </div>
+ </body>
+</html>

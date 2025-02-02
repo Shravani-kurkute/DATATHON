@@ -1,0 +1,159 @@
+<html>
+ <head>
+  <title>
+   Profile Settings
+  </title>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet"/>
+  <style>
+   body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background-color: #0d1117;
+            color: #c9d1d9;
+        }
+        .container {
+            max-width: 600px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        .back-button {
+            color: #58a6ff;
+            text-decoration: none;
+            display: flex;
+            align-items: center;
+            margin-bottom: 20px;
+        }
+        .back-button i {
+            margin-right: 8px;
+        }
+        .profile-card {
+            background-color: #161b22;
+            border-radius: 10px;
+            padding: 20px;
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        .profile-card img {
+            border-radius: 50%;
+            width: 80px;
+            height: 80px;
+            margin-bottom: 10px;
+        }
+        .profile-card h2 {
+            margin: 0;
+            font-size: 24px;
+        }
+        .profile-card p {
+            margin: 5px 0 0;
+            color: #8b949e;
+        }
+        .settings-section {
+            background-color: #161b22;
+            border-radius: 10px;
+            margin-bottom: 20px;
+            padding: 10px 0;
+        }
+        .settings-section h3 {
+            margin: 0;
+            padding: 10px 20px;
+            font-size: 18px;
+            border-bottom: 1px solid #30363d;
+        }
+        .settings-item {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px 20px;
+            color: #c9d1d9;
+            text-decoration: none;
+            border-top: 1px solid #30363d;
+        }
+        .settings-item:first-child {
+            border-top: none;
+        }
+        .settings-item i {
+            margin-right: 10px;
+        }
+        .sign-out-button {
+            display: block;
+            width: 100%;
+            padding: 15px;
+            text-align: center;
+            background-color: #f85149;
+            color: #ffffff;
+            text-decoration: none;
+            border-radius: 10px;
+            font-size: 16px;
+            margin-top: 20px;
+        }
+  </style>
+ </head>
+ <body>
+  <div class="container">
+   <a class="back-button" href="welcome.html">
+    <i class="fas fa-arrow-left">
+    </i>
+    Back
+   </a>
+   <div class="profile-card">
+    <img alt="Profile picture" height="80" src="https://storage.googleapis.com/a1aa/image/Mlq-9ogx8oXChxheeKFmk6RA1CpHsy73fB-sMMpFT-4.jpg" width="80"/>
+    <h2>
+     Shraw
+    </h2>
+    <p>
+     Premium Member
+    </p>
+   </div>
+   <div class="settings-section">
+    <h3>
+     Account Settings
+    </h3>
+    <a class="settings-item" href="#">
+     <i class="fas fa-user">
+     </i>
+     Edit Profile
+     <i class="fas fa-chevron-right">
+     </i>
+    </a>
+    <a class="settings-item" href="#">
+     <i class="fas fa-bell">
+     </i>
+     Notifications
+     <i class="fas fa-chevron-right">
+     </i>
+    </a>
+    <a class="settings-item" href="#">
+     <i class="fas fa-lock">
+     </i>
+     <a href="dashboard.html">Dashboard</a>
+     <i class="fas fa-chevron-right">
+     </i>
+    </a>
+   </div>
+   <div class="settings-section">
+    <h3>
+     Preferences
+    </h3>
+    <a class="settings-item" href="#">
+     <i class="fas fa-paint-brush">
+     </i>
+     Appearance
+     <i class="fas fa-chevron-right">
+     </i>
+    </a>
+    <a class="settings-item" href="#">
+     <i class="fas fa-language">
+     </i>
+     Language
+     <i class="fas fa-chevron-right">
+     </i>
+    </a>
+   </div>
+   <a class="sign-out-button" href="index.html">
+    <i class="fas fa-sign-out-alt">
+    </i>
+    Sign Out
+   </a>
+  </div>
+ </body>
+</html>

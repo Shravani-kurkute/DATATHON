@@ -1,0 +1,97 @@
+<html>
+<head>
+    <title>Transform Your Space</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <style>
+        body {
+            background-color: #0f0f2d;
+            color: #ffffff;
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin: 0;
+            padding: 0;
+        }
+        .container {
+            padding: 50px 20px;
+        }
+        h1 {
+            font-size: 2em;
+            margin-bottom: 10px;
+        }
+        p {
+            font-size: 1em;
+            margin-bottom: 30px;
+        }
+        .categories {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 20px;
+        }
+        .category {
+            background-color: #1a1a3d;
+            border-radius: 10px;
+            padding: 20px;
+            width: 150px;
+            text-align: center;
+            transition: background-color 0.3s;
+        }
+        .category:hover {
+            background-color: #2a2a5d;
+        }
+        .category i {
+            font-size: 2em;
+            margin-bottom: 10px;
+        }
+        .category p {
+            margin: 0;
+            font-size: 1em;
+        }
+        .explore-button {
+            background-color: #00ff6a;
+            border: none;
+            border-radius: 20px;
+            color: #0f0f2d;
+            cursor: pointer;
+            font-size: 1em;
+            margin-top: 30px;
+            padding: 10px 20px;
+            transition: background-color 0.3s;
+        }
+        .explore-button:hover {
+            background-color: #00cc55;
+        }
+    </style>
+</head>
+<body>
+    <a href="recommendation.html" style="color: white;"><i class="fas fa-arrow-left">Back
+    </i></a>
+    <div class="container">
+        <h1>Transform Your Space</h1>
+        <p>Select one or more categories to discover perfect pieces for your home</p>
+        <div class="categories">
+            <div class="category">
+                <i class="fas fa-couch"></i>
+                <p>Furniture</p>
+            </div>
+            <div class="category">
+                <i class="fas fa-lightbulb"></i>
+                <p>Lighting</p>
+            </div>
+            <div class="category">
+                <i class="fas fa-image"></i>
+                <p>Wall Decor</p>
+            </div>
+            <div class="category">
+                <i class="fas fa-rug"></i>
+                <p>Textiles</p>
+            </div>
+            <div class="category">
+                <i class="fas fa-box"></i>
+                <p>Storage</p>
+            </div>
+        </div>
+        <button class="explore-button"><a href="homeavailable.html">Explore Now</a></button>
+    </div>
+</body>
+</html>

@@ -1,0 +1,157 @@
+<html>
+ <head>
+  <title>
+   Liked Items
+  </title>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet"/>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&amp;display=swap" rel="stylesheet"/>
+  <style>
+   body {
+            margin: 0;
+            font-family: 'Roboto', sans-serif;
+            background-color: #1a1a2e;
+            color: #fff;
+        }
+        .container {
+            padding: 20px;
+        }
+        .header {
+            display: flex;
+            align-items: center;
+            padding: 10px 0;
+        }
+        .header i {
+            font-size: 24px;
+            cursor: pointer;
+        }
+        .header h1 {
+            margin: 0 auto;
+            font-size: 24px;
+        }
+        .card-container {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            flex-wrap: wrap;
+        }
+        .card {
+            background-color: #2e2e4d;
+            border-radius: 10px;
+            overflow: hidden;
+            width: 300px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+        .card img {
+            width: 100%;
+            height: auto;
+        }
+        .card-content {
+            padding: 15px;
+        }
+        .card-content h3 {
+            margin: 0;
+            font-size: 20px;
+        }
+        .card-content p {
+            margin: 10px 0;
+            font-size: 14px;
+            color: #b0b0b0;
+        }
+        .card-footer {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 15px;
+            background-color: #2e2e4d;
+        }
+        .card-footer .price {
+            color: #00ff00;
+            font-size: 18px;
+            font-weight: 700;
+        }
+        .card-footer .actions {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        .card-footer .actions i {
+            color: #ff0000;
+            cursor: pointer;
+        }
+        .card-footer .actions button {
+            background-color: #007bff;
+            color: #fff;
+            border: none;
+            padding: 10px 15px;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 14px;
+        }
+        @media (max-width: 768px) {
+            .card-container {
+                flex-direction: column;
+                align-items: center;
+            }
+        }
+  </style>
+ </head>
+ <body>
+  <div class="container">
+   <div class="header">
+    <i class="fas fa-arrow-left">
+    </i>
+    <h1>
+     Liked Items
+    </h1>
+   </div>
+   <div class="card-container">
+    <div class="card">
+     <img alt="Modern Sofa - Contemporary 3-seater sofa with plush cushions" height="200" src="https://storage.googleapis.com/a1aa/image/T8A1pEMYPuDc6uxwgkuJXiExdSGQ_TPURDQICQZOQGU.jpg" width="300"/>
+     <div class="card-content">
+      <h3>
+       Modern Sofa
+      </h3>
+      <p>
+       Contemporary 3-seater sofa with plush cushions
+      </p>
+     </div>
+     <div class="card-footer">
+      <span class="price">
+       $899.99
+      </span>
+      <div class="actions">
+       <i class="fas fa-heart">
+       </i>
+       <button>
+        Add to Cart
+       </button>
+      </div>
+     </div>
+    </div>
+    <div class="card">
+     <img alt="Accent Chair - Stylish accent chair for living room" height="200" src="https://storage.googleapis.com/a1aa/image/SLEDLCXkRaFDd2qzkHcGhWQcjCFRx0v3AjKZAPSFumE.jpg" width="300"/>
+     <div class="card-content">
+      <h3>
+       Accent Chair
+      </h3>
+      <p>
+       Stylish accent chair for living room
+      </p>
+     </div>
+     <div class="card-footer">
+      <span class="price">
+       $299.99
+      </span>
+      <div class="actions">
+       <i class="fas fa-heart">
+       </i>
+       <button>
+        Add to Cart
+       </button>
+      </div>
+     </div>
+    </div>
+   </div>
+  </div>
+ </body>
+</html>

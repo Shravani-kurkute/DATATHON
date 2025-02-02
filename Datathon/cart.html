@@ -1,0 +1,194 @@
+<html>
+ <head>
+  <title>
+   Shopping Cart
+  </title>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet"/>
+  <style>
+   body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background-color: #1a1a2e;
+            color: #fff;
+        }
+        .container {
+            width: 90%;
+            max-width: 800px;
+            margin: 20px auto;
+        }
+        .header {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 10px 0;
+        }
+        .header i {
+            font-size: 24px;
+            cursor: pointer;
+        }
+        .header h1 {
+            font-size: 24px;
+            margin: 0;
+        }
+        .cart-item {
+            display: flex;
+            align-items: center;
+            background-color: #2e2e4e;
+            border-radius: 10px;
+            padding: 10px;
+            margin-bottom: 20px;
+        }
+        .cart-item img {
+            width: 100px;
+            height: 100px;
+            border-radius: 10px;
+            margin-right: 20px;
+        }
+        .cart-item-details {
+            flex-grow: 1;
+        }
+        .cart-item-details h2 {
+            font-size: 18px;
+            margin: 0 0 10px;
+        }
+        .cart-item-details p {
+            margin: 0 0 10px;
+            color: #aaa;
+        }
+        .cart-item-details .price {
+            color: #00ff00;
+            font-size: 18px;
+            margin-right: 10px;
+        }
+        .cart-item-actions {
+            display: flex;
+            align-items: center;
+        }
+        .cart-item-actions i {
+            font-size: 18px;
+            margin: 0 5px;
+            cursor: pointer;
+        }
+        .total {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px 0;
+            font-size: 18px;
+        }
+        .total .amount {
+            color: #00ff00;
+            font-size: 24px;
+        }
+        .checkout {
+            display: block;
+            width: 100%;
+            padding: 15px;
+            background-color: #00ff00;
+            color: #000;
+            text-align: center;
+            border: none;
+            border-radius: 10px;
+            font-size: 18px;
+            cursor: pointer;
+        }
+  </style>
+ </head>
+ <body>
+  <div class="container">
+   <div class="header">
+    <i class="fas fa-arrow-left">
+    </i>
+    <h1>
+     Shopping Cart
+    </h1>
+   </div>
+   <div class="cart-item">
+    <img alt="Modern Sofa - Contemporary 3-seater sofa with plush cushions" height="100" src="https://storage.googleapis.com/a1aa/image/yoPZOizRx0T8bnwg4JJlaEJyQvlb5GF2N9px5WYmS2g.jpg" width="100"/>
+    <div class="cart-item-details">
+     <h2>
+      Modern Sofa
+     </h2>
+     <p>
+      Contemporary 3-seater sofa with plush cushions
+     </p>
+     <span class="price">
+      $899.99
+     </span>
+    </div>
+    <div class="cart-item-actions">
+     <i class="fas fa-minus-circle">
+     </i>
+     <span>
+      1
+     </span>
+     <i class="fas fa-plus-circle">
+     </i>
+     <i class="fas fa-trash-alt">
+     </i>
+    </div>
+   </div>
+   <div class="cart-item">
+    <img alt="Accent Chair - Stylish accent chair for living room" height="100" src="https://storage.googleapis.com/a1aa/image/bcHAISQAyjqYKABJLv7UGsVzoabtylf_9D5wL6wjBr0.jpg" width="100"/>
+    <div class="cart-item-details">
+     <h2>
+      Accent Chair
+     </h2>
+     <p>
+      Stylish accent chair for living room
+     </p>
+     <span class="price">
+      $299.99
+     </span>
+    </div>
+    <div class="cart-item-actions">
+     <i class="fas fa-minus-circle">
+     </i>
+     <span>
+      1
+     </span>
+     <i class="fas fa-plus-circle">
+     </i>
+     <i class="fas fa-trash-alt">
+     </i>
+    </div>
+   </div>
+   <div class="cart-item">
+    <img alt="Modern Sofa - Contemporary 3-seater sofa with plush cushions" height="100" src="https://storage.googleapis.com/a1aa/image/yoPZOizRx0T8bnwg4JJlaEJyQvlb5GF2N9px5WYmS2g.jpg" width="100"/>
+    <div class="cart-item-details">
+     <h2>
+      Modern Sofa
+     </h2>
+     <p>
+      Contemporary 3-seater sofa with plush cushions
+     </p>
+     <span class="price">
+      $899.99
+     </span>
+    </div>
+    <div class="cart-item-actions">
+     <i class="fas fa-minus-circle">
+     </i>
+     <span>
+      1
+     </span>
+     <i class="fas fa-plus-circle">
+     </i>
+     <i class="fas fa-trash-alt">
+     </i>
+    </div>
+   </div>
+   <div class="total">
+    <span>
+     Total:
+    </span>
+    <span class="amount">
+     $2099.97
+    </span>
+   </div>
+   <button class="checkout">
+    Checkout
+   </button>
+  </div>
+ </body>
+</html>

@@ -1,0 +1,109 @@
+<html>
+<head>
+    <title>Find Your Perfect Footwear</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <style>
+        body {
+            background-color: #1a1a2e;
+            color: white;
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+        .container {
+            text-align: center;
+        }
+        h1 {
+            font-size: 2em;
+            margin-bottom: 10px;
+        }
+        p {
+            color: #b0b0b0;
+            margin-bottom: 30px;
+        }
+        .categories {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 20px;
+            margin-bottom: 30px;
+        }
+        .category {
+            background-color: #2e2e4d;
+            padding: 20px 40px;
+            border-radius: 10px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+        .category:hover {
+            background-color: #3e3e5d;
+        }
+        .category i {
+            font-size: 2em;
+            margin-bottom: 10px;
+        }
+        .category.selected {
+            background-color: #1a73e8;
+        }
+        .category.selected:hover {
+            background-color: #1a73e8;
+        }
+        .explore-btn {
+            background-color: #00ff00;
+            color: #1a1a2e;
+            padding: 15px 30px;
+            border: none;
+            border-radius: 30px;
+            font-size: 1em;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+        .explore-btn:hover {
+            background-color: #00cc00;
+        }
+    </style>
+</head>
+<body>
+    <a href="recommendation.html" style="color: white;"><i class="fas fa-arrow-left">Back
+    </i></a>
+    <div class="container">
+        <h1>Find Your Perfect Footwear</h1>
+        <p>Select one or more categories based on your footwear preferences</p>
+        <div class="categories">
+            <div class="category" onclick="toggleSelection(this)">
+                <i class="fas fa-running"></i>
+                <span>Sneakers</span>
+            </div>
+            <div class="category" onclick="toggleSelection(this)">
+                <i class="fas fa-user-tie"></i>
+                <span>Formal Shoes</span>
+            </div>
+            <div class="category" onclick="toggleSelection(this)">
+                <i class="fas fa-basketball-ball"></i>
+                <span>Sports Shoes</span>
+            </div>
+            <div class="category" onclick="toggleSelection(this)">
+                <i class="fas fa-hiking"></i>
+                <span>Boots</span>
+            </div>
+            <div class="category" onclick="toggleSelection(this)">
+                <i class="fas fa-shoe-prints"></i>
+                <span>Sandals</span>
+            </div>
+        </div>
+        
+            <a href="availableshoes.html" style="text-decoration: none; color: white;">Explore Now</a>
+    </div>
+    <script>
+        function toggleSelection(element) {
+            element.classList.toggle('selected');
+        }
+    </script>
+</body>
+</html>

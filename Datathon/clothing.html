@@ -1,0 +1,130 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Discover Your Style</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            margin: 0;
+            font-family: 'Roboto', sans-serif;
+            background-color: #1a1a2e;
+            color: #fff;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+        }
+        h1 {
+            font-size: 2rem;
+            font-weight: 700;
+            margin-bottom: 0.5rem;
+        }
+        p {
+            font-size: 1rem;
+            font-weight: 400;
+            margin-bottom: 2rem;
+            color: #b0b0b0;
+        }
+        .categories {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 1rem;
+            width: 80%;
+            max-width: 800px;
+        }
+        .category {
+            height: 100px;
+            background-color: #2e2e4d;
+            border-radius: 10px;
+            padding: 2rem;
+            text-align: center;
+            transition: background-color 0.3s, transform 0.3s;
+        }
+        .category:hover {
+            background-color: #3e3e5e;
+        }
+        .category i {
+            padding-top: 20px;
+            font-size: 2rem;
+            margin-bottom: 1rem;
+        }
+        .category p {
+            margin: 0;
+            font-size: 1rem;
+            font-weight: 500;
+        }
+        .explore-btn {
+            margin-top: 2rem;
+            padding: 0.75rem 2rem;
+            background-color: #6a0dad;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            font-size: 1rem;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+        .explore-btn:hover {
+            background-color: #7a1dad;
+        }
+        @media (max-width: 768px) {
+            .categories {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+        @media (max-width: 480px) {
+            .categories {
+                grid-template-columns: 1fr;
+            }
+        }
+        .category.selected {
+            background-color: #1eb85b;
+            transform: scale(1.05);
+            color: black;
+        }
+    </style>
+</head>
+<body>
+    <a href="recommendation.html" style="color: white;"><i class="fas fa-arrow-left">Back
+    </i></a>
+    <h1>Discover Your Style</h1>
+    <p>Select one or more categories based on your fashion preferences</p>
+    <div class="categories">
+        <div class="category" onclick="toggleSelection(this)">
+            <i class="fas fa-tshirt"></i>
+            <p>Casual Wear</p>
+        </div>
+        <div class="category" onclick="toggleSelection(this)">
+            <i class="fas fa-suitcase"></i>
+            <p>Formal Wear</p>
+        </div>
+        <div class="category" onclick="toggleSelection(this)">
+            <i class="fas fa-running"></i>
+            <p>Sports Wear</p>
+        </div>
+        <div class="category" onclick="toggleSelection(this)">
+            <i class="fas fa-snowflake"></i>
+            <p>Winter Collection</p>
+        </div>
+        <div class="category" onclick="toggleSelection(this)">
+            <i class="fas fa-sun"></i>
+            <p>Summer Collection</p>
+        </div>
+        <div class="category" onclick="toggleSelection(this)">
+            <i class="fas fa-user-friends"></i>
+            <p>Ethnic Wear</p>
+        </div>
+    </div>
+    
+    <a href="tshirtavalaible.html" class="explore-btn">Explore Now</a>
+
+    <script>
+        function toggleSelection(element) {
+            element.classList.toggle('selected');
+        }
+    </script>
+</body>
+</html>

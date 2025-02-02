@@ -1,0 +1,138 @@
+<html>
+ <head>
+  <title>
+   Available Products
+  </title>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet"/>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&amp;display=swap" rel="stylesheet"/>
+  <style>
+   body {
+            font-family: 'Roboto', sans-serif;
+            background-color: #1a1a2e;
+            color: #fff;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+        .container {
+            width: 90%;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        .header {
+            display: flex;
+            align-items: center;
+            margin-bottom: 20px;
+        }
+        .header i {
+            font-size: 24px;
+            cursor: pointer;
+        }
+        .header h1 {
+            flex-grow: 1;
+            text-align: center;
+            font-size: 24px;
+            margin: 0;
+        }
+        .products {
+            display: flex;
+            gap: 20px;
+            flex-wrap: wrap;
+        }
+        .product-card {
+            background-color: #2e2e4d;
+            border-radius: 10px;
+            overflow: hidden;
+            width: 100%;
+            max-width: 300px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+        .product-card img {
+            width: 100%;
+            height: auto;
+        }
+        .product-info {
+            padding: 15px;
+        }
+        .product-info h2 {
+            font-size: 18px;
+            margin: 0 0 10px;
+        }
+        .product-info p {
+            font-size: 14px;
+            margin: 0 0 15px;
+            color: #b0b0b0;
+        }
+        .product-info .price {
+            font-size: 18px;
+            color: #00ff00;
+            margin-bottom: 10px;
+        }
+        .product-info .add-to-cart {
+            background-color: #007bff;
+            color: #fff;
+            border: none;
+            padding: 10px 15px;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 14px;
+        }
+        @media (max-width: 768px) {
+            .products {
+                flex-direction: column;
+                align-items: center;
+            }
+        }
+  </style>
+ </head>
+ <body>
+  <div class="container">
+   <div class="header">
+    <i class="fas fa-arrow-left"><a href="electronics.html">Back</a>
+    </i>
+    <h1>
+     Available Products
+    </h1>
+   </div>
+   <div class="products">
+    <div class="product-card">
+     <img alt="High-performance gaming laptop with RGB keyboard" height="200" src="https://storage.googleapis.com/a1aa/image/lr2Cv3iGpBAyKnYpFVIhlGg_GYvIY7Q6oxPgBsZIlH0.jpg" width="300"/>
+     <div class="product-info">
+      <h2>
+       Gaming Laptop
+      </h2>
+      <p>
+       High-performance gaming laptop with RGB keyboard
+      </p>
+      <div class="price">
+       $1499.99
+      </div>
+      <button class="add-to-cart">
+       Add to Cart
+      </button>
+     </div>
+    </div>
+    <div class="product-card">
+     <img alt="Slim and lightweight laptop for productivity" height="200" src="https://storage.googleapis.com/a1aa/image/KGKTXo0ptdekROdi2t_Zkg9SRYDMSoz2PRuStPy5M7U.jpg" width="300"/>
+     <div class="product-info">
+      <h2>
+       Ultrabook
+      </h2>
+      <p>
+       Slim and lightweight laptop for productivity
+      </p>
+      <div class="price">
+       $1299.99
+      </div>
+      <button class="add-to-cart">
+       Add to Cart
+      </button>
+     </div>
+    </div>
+   </div>
+  </div>
+ </body>
+</html>

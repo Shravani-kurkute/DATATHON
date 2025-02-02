@@ -1,0 +1,140 @@
+<html>
+ <head>
+  <title>Discover Your Recommended</title>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet"/>
+  <style>
+   body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background-color: #1a1a2e;
+            color: #fff;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            flex-direction: column;
+        }
+        .container {
+            text-align: center;
+        }
+        .container h1 {
+            font-size: 2em;
+            margin-bottom: 10px;
+        }
+        .container p {
+            font-size: 1em;
+            margin-bottom: 20px;
+            color: #b0b0b0;
+        }
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 20px;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        .grid-item {
+            background-color: #2e2e3a;
+            padding: 20px;
+            border-radius: 10px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            transition: background-color 0.3s;
+            cursor: pointer;
+        }
+        .grid-item:hover {
+            background-color: #3e3e4a;
+        }
+        .grid-item.selected {
+            background-color: #4caf50;
+        }
+        .grid-item img {
+            width: 50px;
+            height: 50px;
+            margin-bottom: 10px;
+        }
+        .grid-item p {
+            margin: 0;
+            font-size: 1em;
+            color: #b0b0b0;
+        }
+        .explore-button {
+            margin-top: 20px;
+            padding: 10px 20px;
+            background-color: #3e3e4a;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+        .explore-button:hover {
+            background-color: #4e4e5a;
+        }
+        @media (max-width: 768px) {
+            .grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+        @media (max-width: 480px) {
+            .grid {
+                grid-template-columns: 1fr;
+            }
+        }
+  </style>
+  <script>
+   document.addEventListener('DOMContentLoaded', function() {
+        const gridItems = document.querySelectorAll('.grid-item');
+        const exploreButton = document.querySelector('.explore-button');
+
+        gridItems.forEach(item => {
+            item.addEventListener('click', function() {
+                // Remove selection from others and select only the clicked one
+                gridItems.forEach(i => i.classList.remove('selected'));
+                this.classList.add('selected');
+            });
+        });
+
+        exploreButton.addEventListener('click', function() {
+            const selectedItem = document.querySelector('.grid-item.selected');
+            if (selectedItem) {
+                const category = selectedItem.getAttribute('data-category');
+                // Redirect based on category
+                window.location.href = category + ".html";
+            } else {
+                alert("Please select a category before exploring!");
+            }
+        });
+    });
+  </script>
+ </head>
+ <body>
+    <a href="front.html" style="color: white;"><i class="fas fa-magic">Activity
+    </i></a>
+  <div class="container">
+   <h1>Discover your recommended</h1>
+   <p>Select one category based on your preferences</p>
+   <div class="grid">
+    <div class="grid-item" data-category="clothing">
+     <img alt="Clothing icon" height="50" src="https://storage.googleapis.com/a1aa/image/wj8Muiy4XuJygaf7P50zAhcrCjz6pzr64hOn1tjQn_8.jpg" width="50"/>
+     <p>Clothing</p>
+    </div>
+    <div class="grid-item" data-category="footwear">
+     <img alt="Footwear icon" height="50" src="https://storage.googleapis.com/a1aa/image/5XA3-vTRRrEPoMbl4EPxIKkM2CdlSdjzFzE9bEM8Akk.jpg" width="50"/>
+     <p>Footwear</p>
+    </div>
+    <div class="grid-item" data-category="electronics">
+     <img alt="Electronics icon" height="50" src="https://storage.googleapis.com/a1aa/image/x2QxIPjfVPmZKtwtdtVUYTPdD7ytYkMMfLE1v2Zpvdw.jpg" width="50"/>
+     <p>Electronics</p>
+    </div>
+    <div class="grid-item" data-category="home-decor">
+     <img alt="Home Decor icon" height="50" src="https://storage.googleapis.com/a1aa/image/1r8jOfqfAVnZ9QrBcWl2HjTt04Q8Jgzj00UyhS2T0fE.jpg" width="50"/>
+     <p>Home Decor</p>
+    </div>
+   </div>
+   <button class="explore-button">Explore More</button>
+  </div>
+ </body>
+</html>
